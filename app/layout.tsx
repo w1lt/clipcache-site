@@ -14,8 +14,8 @@ export const metadata: Metadata = {
       { url: '/favicons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
     other: [
-      { url: '/favicons/icon-192-maskable.png', sizes: '192x192', type: 'image/png', purpose: 'maskable' },
-      { url: '/favicons/icon-512-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+      { url: '/favicons/icon-192-maskable.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicons/icon-512-maskable.png', sizes: '512x512', type: 'image/png' },
     ],
   },
 }
