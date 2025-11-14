@@ -74,51 +74,28 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.h1
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-              className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent"
-            >
+          <div>
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent tracking-tight">
               ClipCache
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto"
-            >
-              A lightweight macOS menu bar app that lets you copy multiple
-              images and text snippets, then paste them all at once with a
-              single keyboard shortcut.
-            </motion.p>
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-2xl mx-auto mb-2 leading-relaxed">
+              Copy multiple clipboard items and paste them all at once.
+            </p>
+            <p className="text-sm md:text-base text-gray-400 mb-10 max-w-2xl mx-auto">
+              macOS 26.1+
+            </p>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
               <motion.a
                 href="https://github.com/w1lt/ClipCache/releases/latest/download/ClipCache.zip"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
                 whileHover={{
                   scale: 1.05,
                 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-white to-gray-300 text-black rounded-lg font-semibold text-lg transition-all"
               >
-                <motion.svg
-                  animate={{ y: [0, -3, 0] }}
-                  transition={{ repeat: Infinity, duration: 2, delay: 1 }}
+                <svg
                   className="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
@@ -130,16 +107,13 @@ export default function Home() {
                     strokeWidth={2}
                     d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                   />
-                </motion.svg>
+                </svg>
                 Download
               </motion.a>
               <motion.a
                 href="https://github.com/w1lt/ClipCache"
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
                 whileHover={{
                   scale: 1.05,
                   borderColor: "rgba(255, 255, 255, 0.5)",
@@ -147,8 +121,7 @@ export default function Home() {
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 px-8 py-4 bg-gray-800/50 border border-gray-700 text-gray-200 rounded-lg font-semibold text-lg hover:bg-gray-700/50 transition-all"
               >
-                <motion.svg
-                  whileHover={{ rotate: 15 }}
+                <svg
                   className="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
@@ -160,26 +133,21 @@ export default function Home() {
                     strokeWidth={2}
                     d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                   />
-                </motion.svg>
+                </svg>
                 View Source
               </motion.a>
-            </motion.div>
+            </div>
 
             {/* Installation Link */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-8"
-            >
-              <motion.a
+            <div className="mt-2">
+              <a
                 href="https://github.com/w1lt/ClipCache?tab=readme-ov-file#%EF%B8%8F-installation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors underline underline-offset-4"
               >
                 Install Guide
-                <motion.svg
+                <svg
                   className="w-4 h-4"
                   fill="none"
                   stroke="currentColor"
@@ -191,10 +159,10 @@ export default function Home() {
                     strokeWidth={2}
                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                   />
-                </motion.svg>
-              </motion.a>
-            </motion.div>
-          </motion.div>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -211,15 +179,16 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.03),transparent_60%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,255,255,0.03),transparent_60%)]" />
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-          <div className="relative max-w-7xl mx-auto min-h-screen flex items-center justify-center py-32 px-6">
+          <div className="relative max-w-6xl mx-auto min-h-screen flex items-center justify-center py-16 px-6">
             <div className="w-fit mx-auto">
-              <div className="flex lg:flex-row flex-col gap-12 lg:gap-20 items-center">
+              <div className="flex lg:flex-row flex-col gap-8 lg:gap-20 items-center">
                 {/* Left Column - Content */}
                 <motion.div
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="max-w-lg"
                 >
                   <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -235,23 +204,23 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="text-xl md:text-2xl text-gray-300 mb-8"
+                    className="text-lg md:text-xl text-gray-400 mb-8"
                   >
-                    Copy multiple items quickly, then paste them all at once.
+                    Copy multiple items quickly then paste them all at once.
                   </motion.p>
                   <div className="space-y-4">
                     {[
                       {
                         title: "Copy",
-                        desc: "Copy images and text within a 30-second window",
+                        desc: "Copy images and text within a 30-second window. Each additional copy resets the timer.",
                       },
                       {
-                        title: "Group",
-                        desc: "Items are automatically grouped together",
+                        title: "Cache",
+                        desc: "Items are automatically stored temporarily. You can paste them all at once with a single shortcut.",
                       },
                       {
                         title: "Paste",
-                        desc: "Press Cmd+Shift+X to paste all",
+                        desc: "Press Cmd+Shift+X to paste all items at once. Your Cache persists until start copying again.",
                       },
                     ].map((step, idx) => (
                       <motion.div
@@ -264,15 +233,13 @@ export default function Home() {
                           delay: 0.4 + idx * 0.1,
                           ease: "easeOut",
                         }}
-                        className="relative bg-gray-800/70 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-white/30 transition-all"
+                        className="relative bg-gray-800/70 backdrop-blur-sm rounded-xl p-5 border border-gray-700/50 hover:border-white/30 transition-all"
                       >
                         <div>
                           <h3 className="text-xl font-semibold mb-2 text-white">
                             {step.title}
                           </h3>
-                          <p className="text-gray-400 text-sm leading-relaxed">
-                            {step.desc}
-                          </p>
+                          <p className="text-gray-500 text-md">{step.desc}</p>
                         </div>
                       </motion.div>
                     ))}
@@ -344,7 +311,7 @@ export default function Home() {
                     scale: 1.05,
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-white to-gray-300 text-black rounded-lg font-semibold text-xl transition-all"
+                  className="flex items-center gap-2 px-8 py-2 bg-gradient-to-r from-white to-gray-300 text-black rounded-lg font-semibold text-xl transition-all"
                 >
                   <motion.svg
                     animate={{ y: [0, -3, 0] }}
