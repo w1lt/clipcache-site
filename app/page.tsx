@@ -98,38 +98,6 @@ export default function Home() {
               single keyboard shortcut.
             </motion.p>
 
-            {/* Installation Link */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mb-8"
-            >
-              <motion.a
-                href="https://github.com/w1lt/ClipCache?tab=readme-ov-file#%EF%B8%8F-installation"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors underline underline-offset-4"
-              >
-                Installation Guide
-                <motion.svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </motion.svg>
-              </motion.a>
-            </motion.div>
-
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -194,6 +162,36 @@ export default function Home() {
                   />
                 </motion.svg>
                 View Source
+              </motion.a>
+            </motion.div>
+
+            {/* Installation Link */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="mt-8"
+            >
+              <motion.a
+                href="https://github.com/w1lt/ClipCache?tab=readme-ov-file#%EF%B8%8F-installation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors underline underline-offset-4"
+              >
+                Install Guide
+                <motion.svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </motion.svg>
               </motion.a>
             </motion.div>
           </motion.div>
@@ -294,95 +292,6 @@ export default function Home() {
                 </motion.div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Section Divider */}
-        <div className="relative h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-
-        {/* Features */}
-        <section className="relative w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900/50 to-black">
-          {/* Section Background */}
-          <TwinklingStars />
-          <div className="absolute inset-0 bg-gradient-to-bl from-gray-950/20 via-transparent to-black/20" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.03),transparent_60%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(255,255,255,0.03),transparent_60%)]" />
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-          <div className="relative max-w-5xl mx-auto min-h-screen flex items-center justify-center py-32 px-6">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="text-5xl md:text-6xl font-bold mb-16 text-center bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent"
-              >
-                Features
-              </motion.h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {[
-                  {
-                    title: "Smart Copy Window",
-                    desc: "Groups related copies automatically",
-                    gradient: "from-white/10 to-gray-500/10",
-                    borderHover: "hover:border-white/30",
-                  },
-                  {
-                    title: "Image & Text",
-                    desc: "Captures both images and text",
-                    gradient: "from-gray-500/10 to-white/10",
-                    borderHover: "hover:border-white/30",
-                  },
-                  {
-                    title: "Custom Shortcuts",
-                    desc: "Configure your own keyboard shortcuts",
-                    gradient: "from-white/10 to-gray-400/10",
-                    borderHover: "hover:border-white/30",
-                  },
-                  {
-                    title: "Menu Bar Display",
-                    desc: "See cache count and timer in menu bar",
-                    gradient: "from-gray-400/10 to-white/10",
-                    borderHover: "hover:border-white/30",
-                  },
-                ].map((feature, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{
-                      duration: 0.6,
-                      delay: idx * 0.1,
-                      ease: "easeOut",
-                    }}
-                    className={`relative bg-gray-800/70 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 ${feature.borderHover} transition-all group overflow-hidden`}
-                  >
-                    {/* Background gradient */}
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-                    />
-
-                    <h3 className="text-2xl font-semibold mb-3 text-white relative z-10">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed relative z-10">
-                      {feature.desc}
-                    </p>
-
-                    {/* Decorative corner accent */}
-                    <div
-                      className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-20 rounded-bl-2xl transition-opacity duration-300`}
-                    />
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
           </div>
         </section>
 
