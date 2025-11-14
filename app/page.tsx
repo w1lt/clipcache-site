@@ -275,7 +275,7 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent"
               >
-                Want to try it for out?
+                Want to try it out?
               </motion.h2>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
