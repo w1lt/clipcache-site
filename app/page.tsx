@@ -39,7 +39,7 @@ function InteractiveImage() {
   return (
     <motion.div
       ref={ref}
-      className="relative rounded-2xl overflow-hidden border border-gray-700/50 inline-block"
+      className="relative rounded-3xl overflow-hidden border border-gray-700/50 inline-block"
       style={{
         maxHeight: "80vh",
         transformStyle: "preserve-3d",
@@ -52,7 +52,7 @@ function InteractiveImage() {
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
       <img
-        src="/images/screenshot.png"
+        src="/images/screenshot1.png"
         alt="ClipCache Settings Window"
         className="h-auto object-contain pointer-events-none block"
         style={{ maxHeight: "80vh", width: "auto" }}
@@ -273,7 +273,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent"
+                className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent pb-2 overflow-visible"
               >
                 Want to try it out?
               </motion.h2>
