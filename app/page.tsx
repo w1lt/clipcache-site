@@ -78,11 +78,11 @@ export default function Home() {
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent tracking-tight">
               ClipCache
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-2xl mx-auto mb-2 leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-2xl mx-auto mb-1 leading-relaxed">
               Copy multiple clipboard items and paste them all at once.
             </p>
-            <p className="text-sm md:text-base text-gray-400 mb-6 max-w-2xl mx-auto">
-              macOS 26.1+
+            <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-6">
+              Free forever and open source. For macOS 26.1+
             </p>
 
             {/* CTA Buttons */}
@@ -202,7 +202,7 @@ export default function Home() {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     className="text-lg md:text-xl text-gray-400 mb-8"
                   >
-                    Copy multiple items quickly then paste them all at once.
+                    Copy multiple items and paste them all at once.
                   </motion.p>
                   <div className="space-y-4">
                     {[
@@ -219,25 +219,17 @@ export default function Home() {
                         desc: "Press Cmd+Shift+X to paste all items at once. Your Cache persists until start copying again.",
                       },
                     ].map((step, idx) => (
-                      <motion.div
+                      <div
                         key={idx}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{
-                          duration: 0.6,
-                          delay: 0.4 + idx * 0.1,
-                          ease: "easeOut",
-                        }}
                         className="relative bg-gray-800/70 backdrop-blur-sm rounded-xl p-5 border border-gray-700/50 hover:border-white/30 transition-all"
                       >
                         <div>
                           <h3 className="text-xl font-semibold mb-2 text-white">
                             {step.title}
                           </h3>
-                          <p className="text-gray-500 text-md">{step.desc}</p>
+                          <p className="text-gray-400 text-md">{step.desc}</p>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </motion.div>
@@ -283,17 +275,8 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent"
               >
-                Ready to try it for yourself?
+                Want to try it for out?
               </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto"
-              >
-                Download ClipCache and start copying multiple items in seconds.
-              </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -307,8 +290,6 @@ export default function Home() {
                   className="flex items-center gap-2 px-8 py-2 bg-gradient-to-r from-white to-gray-300 text-black rounded-lg font-semibold text-xl transition-all"
                 >
                   <motion.svg
-                    animate={{ y: [0, -3, 0] }}
-                    transition={{ repeat: Infinity, duration: 2, delay: 0.5 }}
                     className="w-6 h-6"
                     fill="none"
                     stroke="currentColor"
