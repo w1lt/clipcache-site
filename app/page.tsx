@@ -81,7 +81,7 @@ export default function Home() {
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-2xl mx-auto mb-2 leading-relaxed">
               Copy multiple clipboard items and paste them all at once.
             </p>
-            <p className="text-sm md:text-base text-gray-400 mb-10 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-gray-400 mb-6 max-w-2xl mx-auto">
               macOS 26.1+
             </p>
 
@@ -89,11 +89,8 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
               <motion.a
                 href="https://github.com/w1lt/ClipCache/releases/latest/download/ClipCache.zip"
-                whileHover={{
-                  scale: 1.05,
-                }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-white to-gray-300 text-black rounded-lg font-semibold text-lg transition-all"
+                className="flex items-center gap-2 px-8 py-2 bg-gradient-to-r from-white to-gray-300 text-black rounded-lg font-semibold text-lg transition-all"
               >
                 <svg
                   className="w-5 h-5"
@@ -115,11 +112,10 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{
-                  scale: 1.05,
                   borderColor: "rgba(255, 255, 255, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-8 py-4 bg-gray-800/50 border border-gray-700 text-gray-200 rounded-lg font-semibold text-lg hover:bg-gray-700/50 transition-all"
+                className="flex items-center gap-2 px-8 py-2 bg-gray-800/50 border border-gray-700 text-gray-200 rounded-lg font-semibold text-lg hover:bg-gray-700/50 transition-all"
               >
                 <svg
                   className="w-5 h-5"
@@ -307,9 +303,6 @@ export default function Home() {
               >
                 <motion.a
                   href="https://github.com/w1lt/ClipCache/releases/latest/download/ClipCache.zip"
-                  whileHover={{
-                    scale: 1.05,
-                  }}
                   whileTap={{ scale: 0.95 }}
                   className="flex items-center gap-2 px-8 py-2 bg-gradient-to-r from-white to-gray-300 text-black rounded-lg font-semibold text-xl transition-all"
                 >
