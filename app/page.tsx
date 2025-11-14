@@ -52,7 +52,7 @@ function InteractiveImage() {
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
       <img
-        src="/images/screenshot1.png"
+        src="/images/screenshot.png"
         alt="ClipCache Settings Window"
         className="h-auto object-contain pointer-events-none block"
         style={{ maxHeight: "80vh", width: "auto" }}
